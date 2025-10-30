@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+  <style>
+  body {
+  margin: 0;
+  background: #f7f7f7;
+  font-family: sans-serif;
+}
+
+/* Layout Grid */
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "main sidebar"
+    "footer footer";
+  grid-template-columns: 1fr 250px; /* sidebar fixed */
+  gap: 1rem; /* spacing between everything */
+  padding: 1rem;
+}
+
+/* Section Base Styles */
+.header, .main, .sidebar, .footer {
+  border-radius: 0.5rem;
+  padding: 1rem;
+  color: white;
+}
+
+/* Specific Colors */
+.header {
+  grid-area: header;
+  background: #1e90ff;
+}
+
+.main {
+  grid-area: main;
+  background: #3cb371;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background: #ff6347;
+}
+
+.footer {
+  grid-area: footer;
+  background: #4169e1;
+}
+
+/* Items Grid */
+.items {
+  margin-top: 1rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+}
+
+.item {
+  background: #2f8d59;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+
+ 
+    </style>
+  </head>
+  <body>
+       <div class="container">
+
+    <header class="header">header</header>
+
+    <main class="main">
+      <h3>main</h3>
+      <div class="items">
+        <div class="item">item</div>
+        <div class="item">item</div>
+        <div class="item">item</div>
+        <div class="item">item</div>
+        <div class="item">item</div>
+        <div class="item">item</div>
+        <div class="item">item</div>
+        <div class="item">item</div>
+        <div class="item">item</div>
+        <div class="item">item</div>
+        <div class="item">item</div>
+      </div>
+    </main>
+     <aside class="sidebar">sidebar</aside>
+    <footer class="footer">footer</footer>
+   </div>
+
+  </body>   
+</html>
