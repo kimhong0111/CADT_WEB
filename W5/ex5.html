@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Linglee Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: #e9ecf3;
+}
+
+/* GRID LAYOUT WRAPPER */
+.layout {
+  display: grid;
+  grid-template-columns: 260px 1fr 330px;
+  gap: 25px;
+  padding: 25px;
+  height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+nav a {
+  display: block;
+  padding: 12px 0;
+  color: #777;
+  cursor: pointer;
+}
+
+nav a.active {
+  color: #333;
+  font-weight: bold;
+}
+
+.upgrade-card {
+  background: #eef3ff;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.upgrade-card button {
+  margin-top: 12px;
+  padding: 8px 12px;
+  border: none;
+  background: #4e7bff;
+  color: white;
+  border-radius: 10px;
+}
+
+/* MAIN DASHBOARD */
+.main {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  gap: 25px;
+}
+
+.welcome {
+  background: #ffe7e7;
+  padding: 25px;
+  border-radius: 20px;
+}
+
+.two-col-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.results li {
+  margin-bottom: 12px;
+  list-style: none;
+  font-size: 14px;
+}
+
+.chart-placeholder {
+  height: 180px;
+  background: #f5f6fb;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #aaa;
+}
+
+.courses {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.course {
+  padding: 25px;
+  background: #4e7bff;
+  color: white;
+  border-radius: 15px;
+  text-align: center;
+}
+
+/* RIGHT PANEL */
+.profile {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  background: #ddd;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+}
+
+.user h3, .user p {
+  text-align: center;
+}
+
+.reminders ul {
+  margin-top: 10px;
+  list-style: none;
+}
+
+  </style>
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- LEFT SIDEBAR -->
+  <aside class="sidebar">
+    <h2 class="logo">L</h2>
+
+    <nav>
+      <a class="active">Dashboard</a>
+      <a>Classes</a>
+      <a>Resources</a>
+      <a>Learning plan</a>
+      <a>Chat</a>
+      <a>Settings</a>
+    </nav>
+
+    <div class="upgrade-card">
+      <p>Upgrade to PRO for more resources.</p>
+      <button>Upgrade</button>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+    
+    <!-- Welcome card -->
+    <div class="welcome">
+      <h3>Welcome back Anna!</h3>
+      <p>You’ve learned 80% of your goal this week! Keep it up and improve your results!</p>
+    </div>
+
+    <!-- 2-column grid -->
+    <div class="two-col-grid">
+
+      <div class="card">
+        <h4>Latest results</h4>
+        <ul class="results">
+          <li>Unit 5 – Technology <span>25%</span></li>
+          <li>Unit 12 – Ecology <span>44%</span></li>
+          <li>Unit 9 – Real estate <span>49%</span></li>
+          <li>Unit 8 – Education <span>15%</span></li>
+          <li>Unit 16 – Job market <span>75%</span></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h4>Time spent on learning</h4>
+        <div class="chart-placeholder">[chart]</div>
+      </div>
+
+    </div>
+
+    <!-- Courses -->
+    <div class="courses">
+      <div class="course">B2 – Grammar</div>
+      <div class="course">B2 – Phrasal verbs</div>
+      <div class="course">C1 – Vocabulary</div>
+    </div>
+
+  </main>
+
+  <!-- RIGHT PANEL -->
+  <aside class="profile">
+    <div class="user">
+      <div class="avatar"></div>
+      <h3>Anna Morrison</h3>
+      <p class="role">Student</p>
+    </div>
+
+    <div class="levels card">
+      <p>English – B2</p>
+      <p>Spanish – C1</p>
+    </div>
+
+    <div class="reminders card">
+      <h4>Reminders</h4>
+      <ul>
+        <li>Eng – Vocabulary test</li>
+        <li>Eng – Send grammar homework</li>
+        <li>Spanish – Send essay</li>
+      </ul>
+    </div>
+  </aside>
+
+</div>
+
+</body>
+</html>

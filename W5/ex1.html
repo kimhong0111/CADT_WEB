@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="'en">
+    <head>
+        <style>
+            body{
+                margin:50px;
+                
+            }
+            .wrapper{
+                display:grid;
+                grid-template-columns:150px 150px 150px;
+                grid-template-rows:60px 60px 60px 60px;
+                font-size:20px;
+               
+            }
+
+            .box{
+                background-color:skyblue;
+                color:white;
+                border:4px solid black;
+                text-align: center;
+
+            }
+
+            .a{
+               grid-column:1/4;
+            }
+            .b{
+                grid-column:1/2;
+                grid-row:2/4;
+            }
+            .c{
+               grid-column:2/3; 
+               grid-row:2/3;
+            }
+            .d{
+                grid-column:3/4;
+                grid-row:2/3;
+            }
+            .e{
+                grid-row:3 ;
+                grid-column:2 span;
+            }
+            .f{
+                grid-column:1/4;
+                grid-row:4;
+            }
+        </style>
+        <body>
+<div class="wrapper">
+  <div class="box a">A</div>
+  <div class="box b">B</div>
+  <div class="box c">C</div>
+  <div class="box d">D</div>
+  <div class="box e">E</div>
+  <div class="box f">F</div>
+</div>
+</div>
+        </body>
+    </head>
+</html>
