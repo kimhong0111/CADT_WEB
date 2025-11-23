@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f5f5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Mobile First */
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            gap: 15px;
+        }
+
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .content {
+            background: white;
+            padding: 20px;
+        }
+
+        .sidebar {
+            background: #34495e;
+            color: white;
+            padding: 20px;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Medium Screens */
+        @media (min-width: 600px) {
+            .main-content {
+                flex-direction: row;
+            }
+            
+            .content, .sidebar {
+                flex: 1;
+            }
+        }
+
+        /* Large Screens */
+        @media (min-width: 900px) {
+            .content {
+                flex: 3;
+            }
+            
+            .sidebar {
+                flex: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Response Header</h1>
+        </header>
+
+        <div class="main-content">
+            <section class="content">
+                <h2>Main Content</h2>
+                <p>Content area</p>
+            </section>
+
+            <aside class="sidebar">
+                <h2>Sidebar</h2>
+                <p>Sidebar content</p>
+            </aside>
+        </div>
+
+        <footer>
+            <p>Footer</p>
+        </footer>
+    </div>
+</body>
+</html>

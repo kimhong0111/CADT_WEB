@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimalist Grid</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        body {
+            background: #f8f9fa;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .grid-item {
+            background: white;
+            padding: 20px;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+        }
+
+        .grid-item h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+     
+     
+
+        @media (max-width: 1000px) {
+            .grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 18px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+            
+            .grid-item {
+                padding: 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            
+            body {
+                padding: 15px;
+            }
+            
+            .grid-item {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="grid">
+            
+            <div class="grid-item">
+                <h3>Item 1</h3>
+                
+            </div>
+
+            <div class="grid-item">
+                <h3>Item 2</h3>
+            </div>
+
+            <div class="grid-item">
+                <h3>Item 3</h3>
+            </div>
+
+            <div class="grid-item">
+                <h3>Item 4</h3>
+               
+            </div>
+
+            <div class="grid-item">
+                <h3>Item 5</h3>
+            </div>
+
+            <div class="grid-item">
+                <h3>Item 6</h3>
+            </div>
+
+            <div class="grid-item">
+                <h3>Items 7</h3>
+            </div>
+
+            <div class="grid-item">
+                <h3>Items 8</h3>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
